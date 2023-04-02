@@ -1,0 +1,51 @@
+.exercise {
+  border: 1px solid red;
+}
+.exercise .exercise-title {
+  color: green;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: blue;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 1px;
+}
+.exercise section {
+  display: flex;
+  padding: 20px;
+}
+.exercise #div1 {
+  color: blue;
+  border: 1px solid green;
+  font-size: 1rem;
+  padding: 20px;
+  text-align: center;
+}
+.exercise #div2 {
+  color: red;
+  border: 1px solid green;
+  font-size: 1rem;
+  padding: 20px;
+  text-align: center;
+}
+.exercise #div3 {
+  color: blue;
+  border: 1px solid green;
+  font-size: 1rem;
+  padding: 20px;
+  text-align: center;
+}
+.exercise #div4 {
+  color: red;
+  border: 1px solid green;
+  font-size: 1rem;
+  padding: 20px;
+  text-align: center;
+}
+.exercise #div5 {
+  flex: 1;
+  color: green;
+  border: 1px solid blue;
+  font-size: 24px;
+  padding: 20px;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

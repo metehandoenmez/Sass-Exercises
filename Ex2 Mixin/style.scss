@@ -1,0 +1,46 @@
+$color-primary: red;
+$color-secondary: blue;
+$color-tertiary: green;
+
+@mixin article-style($color, $bordercolor, $fontsize ) {
+    color: $color;
+    border: 1px solid $bordercolor;
+    font-size: $fontsize;
+    padding: 20px;
+    text-align: center;
+}
+
+.exercise {
+border: 1px solid $color-primary;
+
+    .exercise-title {
+        color: $color-tertiary;
+        text-align: center;
+        text-decoration: underline;
+        text-decoration-color: $color-secondary ;
+        text-underline-offset: 10px;
+        text-decoration-thickness: 1px ;
+    }
+
+    section {
+        display: flex;
+        padding: 20px;
+    }
+    
+    #div1 {
+        @include article-style($color-secondary, $color-tertiary, 1rem)
+    }
+    #div2 {
+        @include article-style($color-primary, $color-tertiary, 1rem)
+    }
+    #div3 {
+        @include article-style($color-secondary, $color-tertiary, 1rem)
+    }
+    #div4 {
+        @include article-style($color-primary, $color-tertiary, 1rem)
+    }
+    #div5 {
+        flex:1;
+        @include article-style($color-tertiary, $color-secondary, 24px)
+    }
+}

@@ -1,0 +1,38 @@
+$color-primary: red;
+$color-secondary: blue;
+$color-tertiary: green;
+
+.exercise {
+border: 1px solid $color-primary;
+
+    .exercise-title {
+        color: $color-tertiary;
+        text-align: center;
+        text-decoration: underline;
+        text-decoration-color: $color-secondary ;
+    }
+
+    section {
+        display: flex;
+        padding: 20px;
+    }
+    
+    article {
+        border: 1px solid $color-tertiary;
+        padding: 20px;
+        text-align: center;
+    }
+    #div1 {
+        color: $color-secondary;
+    }
+    #div2 {
+        color: $color-primary;
+    }
+    #div3 {
+        color: $color-secondary;
+    }
+    #div4 {
+        color: $color-primary;
+    }
+}
+

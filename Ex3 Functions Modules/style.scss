@@ -1,0 +1,51 @@
+@use "variables.scss";
+@use "functions" as f;
+
+$color_red: variables.$color-primary;
+$color_blue: variables.$color-secondary;
+$color_green: variables.$color-tertiary;
+$default_size: variables.$default-font-size;
+$default: variables.$default;
+
+@mixin article-style($color, $bordercolor, $fontsize ) {
+    color: $color;
+    border: f.rem(1, $default) solid $bordercolor;
+    font-size: $fontsize;
+    padding: f.rem(20, $default);
+    text-align: center;
+}
+
+.exercise {
+border: f.rem(1, $default) solid $color_red;
+
+    .exercise-title {
+        color: $color_green;
+        text-align: center;
+        text-decoration: underline;
+        text-decoration-color: $color_blue ;
+        text-underline-offset: f.rem(10, $default);
+        text-decoration-thickness: f.rem(1, $default);
+    }
+
+    section {
+        display: flex;
+        padding: f.rem(20, $default);
+    }
+    
+    #div1 {
+        @include article-style($color_blue, $color_green, $default-size)
+    }
+    #div2 {
+        @include article-style($color_red, $color_green, $default-size)
+    }
+    #div3 {
+        @include article-style($color_blue, $color_green, $default-size)
+    }
+    #div4 {
+        @include article-style($color_red, $color_green, $default-size)
+    }
+    #div5 {
+        flex:1;
+        @include article-style($color_green, $color_blue, f.rem(24, $default))
+    }
+}

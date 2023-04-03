@@ -1,0 +1,3 @@
+@function rem($px, $default: 16) {
+    @return calc($px / $default)*1rem;
+  }

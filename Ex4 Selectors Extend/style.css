@@ -1,0 +1,65 @@
+.exercise-subtitle, .exercise-title {
+  color: green;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: blue;
+  text-underline-offset: 0.625rem;
+  text-decoration-thickness: 0.0625rem;
+}
+
+.exercise {
+  border: 0.0625rem solid red;
+}
+.exercise-subtitle {
+  padding: 1rem;
+  border: 0.0625rem solid red;
+  text-decoration: none;
+  margin-bottom: 0px;
+}
+.exercise .div0 {
+  display: flex;
+  justify-content: center;
+}
+.exercise section {
+  display: flex;
+  padding: 1.25rem;
+}
+.exercise section:nth-of-type(2) {
+  padding-top: 0rem;
+}
+.exercise #div1 {
+  color: blue;
+  border: 0.0625rem solid green;
+  font-size: 1rem;
+  padding: 1.25rem;
+  text-align: center;
+}
+.exercise #div2 {
+  color: red;
+  border: 0.0625rem solid green;
+  font-size: 1rem;
+  padding: 1.25rem;
+  text-align: center;
+}
+.exercise #div3 {
+  color: blue;
+  border: 0.0625rem solid green;
+  font-size: 1rem;
+  padding: 1.25rem;
+  text-align: center;
+}
+.exercise #div4 {
+  color: red;
+  border: 0.0625rem solid green;
+  font-size: 1rem;
+  padding: 1.25rem;
+  text-align: center;
+}
+.exercise #div5 {
+  flex: 1;
+  color: green;
+  border: 0.0625rem solid blue;
+  font-size: 1.5rem;
+  padding: 1.25rem;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

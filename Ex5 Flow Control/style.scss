@@ -1,0 +1,121 @@
+@use "variables.scss";
+@use "functions" as f;
+
+$color_red: variables.$color-primary;
+$color_blue: variables.$color-secondary;
+$color_green: variables.$color-tertiary;
+$default_size: variables.$default-font-size;
+$default: variables.$default;
+$black: #000;
+$white: #fff;
+
+@mixin article-style($color, $bordercolor, $fontsize ) {
+    color: $color;
+    border: f.rem(1, $default) solid $bordercolor;
+    font-size: $fontsize;
+    padding: f.rem(20, $default);
+    text-align: center;
+}
+
+%text {
+    color: $color_green;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: $color_blue ;
+    text-underline-offset: f.rem(10, $default);
+    text-decoration-thickness: f.rem(1, $default);
+}
+
+.exercise {
+border: f.rem(1, $default) solid $color_red;
+
+    &-title {
+        @extend %text;
+        
+    }
+    &-subtitle {
+        @extend %text;
+        padding: $default_size;
+        border: f.rem(1, $default) solid $color_red;
+        text-decoration: none;
+        margin-bottom: f.rem(0, $default);
+     }
+
+    .div0 {
+        display: flex;
+        justify-content: center;
+    }
+
+    section {
+        display: flex;
+        padding: f.rem(20, $default);
+
+        &:nth-of-type(2) {
+            padding-top: f.rem(0, $default);
+        }
+        &:nth-of-type(3) {
+            padding-top: f.rem(0, $default);
+        }
+    }
+    
+    #div1 {
+        @include article-style($color_blue, $color_green, $default-size)
+    }
+    #div2 {
+        @include article-style($color_red, $color_green, $default-size)
+    }
+    #div3 {
+        @include article-style($color_blue, $color_green, $default-size)
+    }
+    #div4 {
+        @include article-style($color_red, $color_green, $default-size)
+    }
+    #div5 {
+        flex:1;
+        @include article-style($color_green, $color_blue, f.rem(24, $default))
+    }
+}
+
+
+.fsbox {
+    display: flex;
+    justify-content:space-between;
+    
+  
+    div {
+      width: f.rem(45, $default);
+      height: f.rem(45, $default);
+      display: flex;
+      color: $white;
+      font-weight: bold;
+      border: f.rem(1, $default) solid $color_red;
+    }
+
+  
+    @for $var from 1 through 20 {
+        $color: darken($white, $var * 5);
+        $tcolor: lighten($black, $var * 5);
+  
+      @if $var == 10 {
+        $color: $color_blue;
+        $tcolor: $color_red;
+      }
+  
+      div:nth-child(#{$var}) {
+        background-color: $color;
+        color: $tcolor;
+      }
+    }
+
+    div:hover {
+        background-color: $color_blue;
+        color: $color_red;
+    }
+
+    @for $var from 1 through 3 {
+        .fs-#{$var}rem {
+          font-size: #{$var}rem;
+          font-weight: 300;
+        }
+      }
+}
